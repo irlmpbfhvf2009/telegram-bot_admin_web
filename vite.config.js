@@ -23,7 +23,7 @@ export default ({ command }) => {
       host: '0.0.0.0',
       open: true,
       proxy: { // 代理配置
-        '/dev': 'http://127.0.0.1:5555'
+        '/dev': 'http://127.0.0.1:5556'
         // '/api' : {
         //   target: 'http://127.0.0.1:5555',
         //   changeOrigin: true,

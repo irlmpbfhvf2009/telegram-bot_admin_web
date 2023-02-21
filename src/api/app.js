@@ -16,4 +16,30 @@ export function updateConfig(data) {
       data,
     })
   }
+
+export function groupCategory(data) {
+  return request({
+    url: '/groupCategory',
+    method: 'post',
+    baseURL: '/dev',
+    data
+  })
+}
+export function getAdvertiseData(data) {
+  return request({
+    url: '/getAdvertiseData',
+    method: 'post',
+    baseURL: '/dev',
+    data
+  })
+}
+export function updateAdvertiseData(data) {
+  return request({
+    url: '/updateAdvertiseData',
+    method: 'post',
+    baseURL: '/dev',
+    data
+  })
+}
+
   
