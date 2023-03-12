@@ -3,7 +3,7 @@
  * @params hideMenu: 是否隐藏当前路由结点不在导航中展示
  * @params alwayShow: 只有一个子路由时是否总是展示菜单，默认false
  */
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory , createWebHistory } from 'vue-router'
 import store from '@/store'
 import NProgress from '@/utils/system/nprogress'
 import { changeTitle } from '@/utils/system/title'
@@ -27,7 +27,8 @@ let modules = [
 const routes = modules
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 let asyncRoutes = [
@@ -89,7 +90,6 @@ function eachData(data, type) {
       d.component = createNameComponent(() => import('@/views/main/pages/crudTable/index.vue'))
     }
   })
-  console.log(data)
 }
 
 if (store.state.user.token) {

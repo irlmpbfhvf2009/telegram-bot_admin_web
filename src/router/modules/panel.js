@@ -2,14 +2,15 @@ import Layout from '@/layout/index.vue'
 import { createNameComponent } from '../createNode'
 const route = [
   {
+    mode : 'history',
     path: '/panel',
     component: Layout,
-    redirect: '/panel/advertiseTable',
-    meta: { title: '功能面板', icon: 'el-icon-goblet' },
+    redirect: '/advertise',
+    meta: { title: '功能面板', icon: 'el-icon-s-promotion' },
     alwayShow: true,
     children: [
       {
-        path: 'advertiseTable',
+        path: 'advertise',
         component: createNameComponent(() => import('@/views/main/panel/advertise/index.vue')),
         meta: { title: '广告设置', cache: true, roles: ['admin'] }
       },

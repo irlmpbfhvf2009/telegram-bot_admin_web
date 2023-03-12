@@ -93,13 +93,9 @@ export default defineComponent({
         pageSize: page.size,
         ...query
       }
-      // getConfig().then(res=>{
-      //   console.log(res)
-      // })
       getConfig(params)
       .then(res => {
         let data = res.data.list
-        console.log(res.data.list)
         if (Array.isArray(data)) {
           data.forEach(d => {
             const select = selectData.find(select => select.value === d)
@@ -108,7 +104,6 @@ export default defineComponent({
             // radio ? d.radioName = radio.label : d.radio
           })
         }
-        console.log(res.data.list.length)
         for(var i=0;i<res.data.list.length;i++){
           if(res.data.list[i].value=='True'){
             res.data.list[i].value = '开启'

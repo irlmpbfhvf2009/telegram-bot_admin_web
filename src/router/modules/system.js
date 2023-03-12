@@ -2,6 +2,7 @@ import Layout from '@/layout/index.vue'
 import { createNameComponent } from '../createNode'
 const route = [
   {
+    mode : 'history',
     path: '/system',
     component: Layout,
     redirect: '/404',

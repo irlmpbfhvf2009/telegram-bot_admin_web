@@ -93,12 +93,9 @@ export default defineComponent({
         pageSize: page.size,
         ...query
       }
-      console.log(params)
       getData(params)
       .then(res => {
-        console.log(res)
         let data = res.data.list
-        console.log(Array.isArray(data))
         if (Array.isArray(data)) {
           data.forEach(d => {
             const select = selectData.find(select => select.value === d.choose)

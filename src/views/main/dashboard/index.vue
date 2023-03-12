@@ -1,12 +1,20 @@
 <template>
   <div class="box">
-    123
+    <img :src="tg" alt="tg" />
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import tg from "@/assets/images/tg.jpg"
+
 export default defineComponent({
+  name: 'Dashboard',
+  setup() {
+    return {
+      tg
+    }
+  }
 
 })
 </script>

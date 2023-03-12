@@ -80,8 +80,6 @@ export default defineComponent({
     const tableData = ref([])
     const chooseData = ref([])
     const handleSelectionChange = (val) => {
-      console.log("1132")
-      console.log(val)
       chooseData.value = val
     }
     // 获取表格数据
@@ -100,8 +98,6 @@ export default defineComponent({
       getAdvertiseData(params)
       .then(res => {
         let data = res.data.list
-        console.log("data")
-        console.log(data)
         // if (Array.isArray(data)) {
         //   data.forEach(d => {
         //     const select = selectData.find(select => select.value === d.choose)
@@ -169,7 +165,6 @@ export default defineComponent({
     // 编辑弹窗功能
     const handleEdit = (row) => {
       layer.title = '编辑数据'
-      console.log(row)
       layer.row = row
       layer.show = true
     }

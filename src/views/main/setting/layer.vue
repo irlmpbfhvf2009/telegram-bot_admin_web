@@ -59,7 +59,6 @@ export default defineComponent({
     function init() { // 用于判断新增还是编辑功能
       if (props.layer.row) {
         form.value = JSON.parse(JSON.stringify(props.layer.row)) // 数量量少的直接使用这个转
-        console.log(form.value)
       } else {
 
       }
